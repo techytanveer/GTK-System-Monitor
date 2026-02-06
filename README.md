@@ -1,6 +1,7 @@
 # GTK-System-Monitor
-GTK System Monitor
-Shift: System Monitor
+
+Shift is a GTK based Linux System Monitor, the idea is learn how Engineer Pillars (Correctness → Robustness → Security → Performance → Determinism → Maintainability → Portability → Testability → Deployability) in systems design can be utilized in a project.
+
 A high-performance Linux system monitor built with **C++20, gtkmm-4.0, and libadwaita**. <ins>Shift</ins> is designed with a strict adherence to core engineering principles to ensure reliability and clarity.
 
 # 🛠 Engineering Pillars
