@@ -1,7 +1,7 @@
 # GTK-System-Monitor
 GTK System Monitor
 Shift: System Monitor
-A high-performance Linux system monitor built with ### C++20, gtkmm-4.0, and libadwaita ###. Shift is designed with a strict adherence to core engineering principles to ensure reliability and clarity.
+A high-performance Linux system monitor built with ** C++20, gtkmm-4.0, and libadwaita **. Shift is designed with a strict adherence to core engineering principles to ensure reliability and clarity.
 
 # 🛠 Engineering Pillars
 ## 1. Correctness
