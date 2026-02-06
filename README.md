@@ -5,7 +5,7 @@ A high-performance Linux system monitor built with **C++20, gtkmm-4.0, and libad
 
 # 🛠 Engineering Pillars
 ## 1. Correctness
-Shift ensures data accuracy by utilizing libgtop2 to interface directly with the Linux kernel's */proc* filesystem. CPU usage is calculated via precise delta-tracking between polling intervals, avoiding the common mistake of displaying "boot-time averages."
+Shift ensures data accuracy by utilizing *libgtop2* to interface directly with the Linux kernel's */proc* filesystem. CPU usage is calculated via precise delta-tracking between polling intervals, avoiding the common mistake of displaying "boot-time averages."
 
 ## 2. Robustness
 The application employs a multi-threaded architecture. The hardware-polling engine runs on a dedicated worker thread, ensuring that even if the system is under extreme load, the UI remains responsive. We use *Glib::Dispatcher* for thread-safe communication between the backend and the GTK main loop.
