@@ -1,14 +1,14 @@
 # GTK-System-Monitor
 GTK System Monitor
 Shift: System Monitor
-A high-performance Linux system monitor built with ** C++20, gtkmm-4.0, and libadwaita **. Shift is designed with a strict adherence to core engineering principles to ensure reliability and clarity.
+A high-performance Linux system monitor built with **C++20, gtkmm-4.0, and libadwaita**. Shift is designed with a strict adherence to core engineering principles to ensure reliability and clarity.
 
 # 🛠 Engineering Pillars
 ## 1. Correctness
-Shift ensures data accuracy by utilizing libgtop2 to interface directly with the Linux kernel's /proc filesystem. CPU usage is calculated via precise delta-tracking between polling intervals, avoiding the common mistake of displaying "boot-time averages."
+Shift ensures data accuracy by utilizing libgtop2 to interface directly with the Linux kernel's */proc* filesystem. CPU usage is calculated via precise delta-tracking between polling intervals, avoiding the common mistake of displaying "boot-time averages."
 
 ## 2. Robustness
-The application employs a multi-threaded architecture. The hardware-polling engine runs on a dedicated worker thread, ensuring that even if the system is under extreme load, the UI remains responsive. We use Glib::Dispatcher for thread-safe communication between the backend and the GTK main loop.
+The application employs a multi-threaded architecture. The hardware-polling engine runs on a dedicated worker thread, ensuring that even if the system is under extreme load, the UI remains responsive. We use *Glib::Dispatcher* for thread-safe communication between the backend and the GTK main loop.
 
 ## 3. Security
 Memory Safety: 
@@ -18,18 +18,18 @@ Minimal Privileges:
 Shift operates entirely in user-space, requiring no sudo or elevated permissions to read system stats.
 
 ## 4. Performance
-By using std::this_thread::sleep_for, we maintain a constant 1Hz update frequency. This keeps Shift's own CPU footprint at <1% on modern systems, ensuring the monitor doesn't become the problem it's trying to track.
+By using *std::this_thread::sleep_for*, we maintain a constant 1Hz update frequency. This keeps Shift's own CPU footprint at <1% on modern systems, ensuring the monitor doesn't become the problem it's trying to track.
 
 ## 5. Determinism
-State transitions are predictable. The UI only updates when the dispatcher receives a signal, and data snapshots are protected by std::mutex to prevent race conditions or "jittery" data displays.
+State transitions are predictable. The UI only updates when the dispatcher receives a signal, and data snapshots are protected by *std::mutex* to prevent race conditions or "jittery" data displays.
 
 ## 6. Maintainability
 The codebase follows a strict Interface-based Design.
 
-IDataProvider: 
+*IDataProvider:* 
 An abstract interface allowing for easy swapping of data sources (e.g., switching from libgtop to a custom /proc parser).
 
-Clear Hierarchy: 
+*Clear Hierarchy:* 
 Logical separation between Core (logic) and UI (presentation).
 
 ## 7. Portability
@@ -55,4 +55,5 @@ make -j$(nproc)
 ./shift
 
 # 📸 Preview
-CPU Usage: Live delta-based percentage tracking. Memory Usage: Real-time GiB consumption vs. System Total.
+CPU Usage: Live delta-based percentage tracking. 
+Memory Usage: Real-time GiB consumption vs. System Total.
