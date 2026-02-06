@@ -59,3 +59,25 @@ make -j$(nproc)
 # 📸 Preview
 **CPU Usage:** Live delta-based percentage tracking. 
 **Memory Usage:** Real-time GiB consumption vs. System Total.
+
+# Project Structure
+
+Shift
+ _CMakeLists.txt
+ _include
+  _core
+   _proivder_interface.hpp
+   _system_snapshot.hpp
+   _hardware_provider.hpp
+  _ui
+   _main_window.hpp
+   _graph_widget.hpp
+  _utils
+   _logger.hpp
+ _src
+ _main.cpp
+  _core
+   _hardware_provider.cpp
+  _ui
+   _main_window.cpp
+ _tests
