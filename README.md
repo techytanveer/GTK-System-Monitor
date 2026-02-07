@@ -66,9 +66,9 @@ make -j$(nproc)
   * CMakeLists.txt
   * include
     * core
-     * proivder_interface.hpp
-     * system_snapshot.hpp
-     * hardware_provider.hpp
+      * proivder_interface.hpp
+      * system_snapshot.hpp
+      * hardware_provider.hpp
     * ui
       * main_window.hpp
       * graph_widget.hpp
