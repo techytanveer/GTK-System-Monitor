@@ -63,37 +63,21 @@ make -j$(nproc)
 # Project Structure
 
 * Shift
- - CMakeLists.txt
- - include
-  * core
-   - proivder_interface.hpp
-   - system_snapshot.hpp
-   - hardware_provider.hpp
-  * ui
-   - main_window.hpp
-   - graph_widget.hpp
-  * utils
-   - logger.hpp
- - src
- - main.cpp
-  * core
-   - hardware_provider.cpp
-  * ui
-   _ main_window.cpp
- * tests
-* GO
-
-* Item 1
-* Item 2
-  * Nested Item A
-  * Nested Item B
-- Item 3
-- Item 4
-
-
-1. First item
-2. Second item
-1. Third item (the '1.' here will render as '3.')
-   1. Nested ordered item (indent with at least four spaces)
-   2. Another nested ordered item
-4. Fourth item
+  * CMakeLists.txt
+  * include
+    * core
+     * proivder_interface.hpp
+     * system_snapshot.hpp
+     * hardware_provider.hpp
+    * ui
+      * main_window.hpp
+      * graph_widget.hpp
+    * utils
+      * logger.hpp
+  * src
+    * main.cpp
+    * core
+      * hardware_provider.cpp
+    * ui
+      * main_window.cpp
+  * tests
